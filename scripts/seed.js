@@ -43,7 +43,7 @@ async function seedUsers(client) {
   } catch (error) {
     console.error('Error seeding users:', error);
     throw error;
-  }
+  }  
 }
 
 async function seedInvoices(client) {
