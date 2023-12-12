@@ -37,7 +37,6 @@ export default function Page() {
             className="hidden md:block"
             alt="Screenshots of the dashboard project showing desktop version"
           />
-          {/* Add monbile Hero Images Here */}
           <Image
             src="/hero-mobile.png"
             width={560}
