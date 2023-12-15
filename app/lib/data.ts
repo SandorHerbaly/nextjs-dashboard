@@ -163,6 +163,8 @@ export async function fetchInvoiceById(id: string) {
       FROM invoices
       WHERE invoices.id = ${id};
     `;
+    
+    console.log('Fetched invoice data:', data.rows);
 
     const invoice = data.rows.map((invoice) => ({
       ...invoice,
@@ -170,6 +172,8 @@ export async function fetchInvoiceById(id: string) {
       amount: invoice.amount / 100,
     }));
 
+
+    console.log(invoice); // Invoice is an empty array []
     return invoice[0];
   } catch (error) {
     console.error('Database Error:', error);
